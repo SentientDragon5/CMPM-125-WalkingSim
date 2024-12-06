@@ -27,6 +27,26 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: Prism_Glass.006
+    second: {fileID: 2100000, guid: e93426a233b8043099c2c7b92905f51f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Prism_Glass.007
+    second: {fileID: 2100000, guid: e93426a233b8043099c2c7b92905f51f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Prism_Glass_medium.001
+    second: {fileID: 2100000, guid: e93426a233b8043099c2c7b92905f51f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Prism_Glass_small.001
+    second: {fileID: 2100000, guid: e93426a233b8043099c2c7b92905f51f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: Shtora2.001
     second: {fileID: 2100000, guid: 757238d66f19349e4b1602b545e44e83, type: 2}
   - first:
