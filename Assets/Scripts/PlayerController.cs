@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class PlayerController : MonoBehaviour
 {
@@ -45,6 +46,8 @@ public class PlayerController : MonoBehaviour
     float maxDot = 0.2f;
     [SerializeField] private AnimationCurve lookCurve = AnimationCurve.EaseInOut(0, 0, 1, 1);
     public LayerMask interactableLayers = 8 << 1;
+
+    public TextMeshProUGUI interactablePreview;
 
     [Header("Current Nearby Interactables")]
     [SerializeField] private List<Interactable> interactionQueue = new List<Interactable>();
@@ -101,6 +104,11 @@ public class PlayerController : MonoBehaviour
             }
         }
         interactionQueue = interactionQueue.OrderBy(i => Vector3.Distance(this.transform.position, i.transform.position)).ToList();//using Linq
+
+        if (interactionQueue.Count > 0)
+            interactablePreview.text = interactionQueue[0].Tooltip;
+        else
+            interactablePreview.text = "";
     }
     /// <summary>
     /// Call this to interact with the nearest object.

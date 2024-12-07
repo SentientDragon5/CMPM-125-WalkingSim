@@ -14,7 +14,6 @@ public class UIManager : MonoBehaviour
 
     void Awake()
     {
-        Cursor.lockState = CursorLockMode.Confined;
         for (int i = 0; i < menus.Count; i++)
         {
             menus[i].enabled = false;
@@ -45,6 +44,7 @@ public class UIManager : MonoBehaviour
 
 
     public void SetTimeScale(float t) => Time.timeScale = t;
+    public void SetCursorHide(bool hide) => Cursor.lockState = hide ? CursorLockMode.Locked : CursorLockMode.Confined;
 
     public void Quit() => Application.Quit();
 }
