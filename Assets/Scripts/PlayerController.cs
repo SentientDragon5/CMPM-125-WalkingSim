@@ -87,7 +87,7 @@ public class PlayerController : MonoBehaviour
     public void CheckForInteractables()
     {
         if (gameObject == null) return;
-        Collider[] colliders = Physics.OverlapSphere(transform.position + offset, interactionRadius, interactableLayers);
+        Collider[] colliders = Physics.OverlapSphere(transform.position + offset, interactionRadius, interactableLayers, QueryTriggerInteraction.Collide);
         interactionQueue.Clear();
         foreach (Collider collider in colliders)
         {
