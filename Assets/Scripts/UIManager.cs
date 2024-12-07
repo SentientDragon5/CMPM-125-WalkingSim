@@ -15,8 +15,11 @@ public class UIManager : MonoBehaviour
     void Awake()
     {
         Cursor.lockState = CursorLockMode.Confined;
-        foreach (var m in menus)
-            m.enabled = false;
+        for (int i = 0; i < menus.Count; i++)
+        {
+            menus[i].enabled = false;
+            onExitMenu[i].Invoke();
+        }
         menus[current_menu].enabled = true;
         onEnterMenu[current_menu].Invoke();
     }
